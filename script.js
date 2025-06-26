@@ -1,12 +1,12 @@
 const COLORS = ['w', 'y', 'r', 'o', 'b', 'g'];
 let faces = [], history = [], moves = [], step = 0;
 
-// Variables for 3D rotation
+
 let isDragging = false;
 let startX, startY;
-let currentRotationX = -30; // Initial X rotation
-let currentRotationY = 45;  // Initial Y rotation
-const rotationSpeed = 0.5;  // Adjust for faster/slower rotation
+let currentRotationX = -30; 
+let currentRotationY = 45; 
+const rotationSpeed = 0.5; 
 
 function initCube() {
     faces = COLORS.map(c => Array(9).fill(c));
@@ -37,7 +37,7 @@ function renderCube() {
         cube3D.appendChild(faceDiv);
     });
 
-    // Update the cube's 3D transform
+    
     updateCubeRotation();
 }
 
@@ -46,7 +46,7 @@ function updateCubeRotation() {
     cube3D.style.transform = `rotateX(${currentRotationX}deg) rotateY(${currentRotationY}deg)`;
 }
 
-// --- Mouse/Touch Interaction for 3D Rotation ---
+
 const cubeContainer = document.getElementById('cube-3d-container');
 
 cubeContainer.addEventListener('mousedown', (e) => {
@@ -76,12 +76,12 @@ cubeContainer.addEventListener('mouseup', () => {
     cubeContainer.classList.remove('dragging');
 });
 
-// Prevent context menu on right-click drag
+
 cubeContainer.addEventListener('contextmenu', (e) => {
     e.preventDefault();
 });
 
-// Handle touch events for mobile
+
 cubeContainer.addEventListener('touchstart', (e) => {
     isDragging = true;
     startX = e.touches[0].clientX;
@@ -246,11 +246,10 @@ function resetCube() {
     document.getElementById("nextBtn").disabled = true;
     document.getElementById("prevBtn").disabled = true;
 
-    // Reset cube's visual rotation to initial state
+   
     currentRotationX = -30;
     currentRotationY = 45;
     updateCubeRotation();
 }
 
-// Initialize the cube when the script loads
 resetCube();
