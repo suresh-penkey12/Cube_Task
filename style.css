@@ -36,7 +36,7 @@ body {
     cursor: not-allowed;
 }
 
-/* 3D Cube Styles */
+
 .cube-3d-container {
     width: 200px;
     height: 200px;
@@ -45,7 +45,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: grab; /* Indicate it's draggable */
+    cursor: grab; 
 }
 .cube-3d-container.dragging {
     cursor: grabbing;
@@ -56,8 +56,8 @@ body {
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transform: rotateX(-30deg) rotateY(45deg); /* Initial rotation */
-    transition: transform 0.1s ease-out; /* Smoother transition for manual rotation */
+    transform: rotateX(-30deg) rotateY(45deg); 
+    transition: transform 0.1s ease-out; 
 }
 
 .face-3d {
@@ -80,7 +80,7 @@ body {
     box-sizing: border-box;
 }
 
-/* Face positioning for a 200px cube */
+
 .face-3d.front  { transform: rotateY(0deg) translateZ(100px); }
 .face-3d.back   { transform: rotateY(180deg) translateZ(100px); }
 .face-3d.right  { transform: rotateY(90deg) translateZ(100px); }
@@ -88,7 +88,6 @@ body {
 .face-3d.top    { transform: rotateX(90deg) translateZ(100px); }
 .face-3d.bottom { transform: rotateX(-90deg) translateZ(100px); }
 
-/* Colors */
 .w { background: white; }
 .y { background: yellow; }
 .r { background: red; }
