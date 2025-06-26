@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>3D Rubik's Cube Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <button id="scrambleBtn1" onclick="scramble(10)">Scramble (Easy)</button>
+            <button id="scrambleBtn2" onclick="scramble(20)">Scramble (Medium)</button>
+            <button id="scrambleBtn3" onclick="scramble(30)">Scramble (Hard)</button>
+            ---
+            <button id="solveBtn" onclick="solve()" disabled>Solve</button>
+            <button id="resetBtn" onclick="resetCube()">Reset</button>
+            ---
+            <button id="prevBtn" onclick="prevStep()" disabled>Prev</button>
+            <button id="nextBtn" onclick="nextStep()" disabled>Next</button>
+        </div>
+        <p id="movesText"></p>
+        <p id="stepInfo"></p>
+    </div>
+
+    <div class="cube-3d-container" id="cube-3d-container">
+        <div class="cube-3d" id="cube-3d"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
